@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTC-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<form class="form" action="" method="post">
+    <div class="card">
+        <div class="topo">
+            <img class="img" src="NicePng_usuario-png_2022264.png" width="50" height="50" alt="fotodeusuário">
+            <h2>Iniciado,</h2>
+            <p class="p1">seja parte da nossa empresa!</p>
+        </div>
+
+        <div class="grupo">
+            <label></label>
+            <input id="senha" required type="text" name="Senha" placeholder="Digite a senha">
+        </div>
+
+        <div class="grupo">
+            <button onclick="entrar(); return false" type="submit">Acessar</button>
+        </div>
+
+    </div>
+</form>
+
+<script>
+
+    function entrar(){
+
+        var senha = document.getElementById('senha').value;
+
+        if(senha == "lorem ipsum"){
+            alert('Sucesso');
+            location.href = "Resposta.html";
+        }else{
+            alert('Senha incorreta');
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="1.css">
+    <title>Questionário</title>
+
+</head>
+
+<script>
+    function verificarRespostas() {
+        var respostasCorretas = {
+            1: 'opcao_correta',
+            2: 'opcao_correta',
+            3: 'opcao_correta',
+            4: 'opcao_correta',
+            5: 'opcao_correta'
+        };
+        var pontuacao = 0;
+
+        for (var pergunta = 1; pergunta <= 5; pergunta++) {
+            var resposta = document.querySelector('input[name="resposta' + pergunta + '"]:checked');
+            if (resposta && resposta.value === respostasCorretas[pergunta]) {
+                pontuacao++;
+            }
+        }
+
+        if (pontuacao === 5) {
+            window.location.href = "Correto.html";
+        } else {
+            alert("Uma ou mais opções estão incorretas!");;
+        }
+    }
+</script>
+
+<body>
+    <div class="container">
+        <h1>Questionário</h1>
+
+        <div class="question">
+            <p class="pergunta">Pergunta 1: Quais são as fases de vida do mímico?</p>
+            <div class="option">
+                <input type="radio" name="resposta1" value="opcao_errada1"> Larva > Metamorfose > Disfarce<br>
+                <input type="radio" name="resposta1" value="opcao_correta"> Jovem > Metamorfose > Disfarce/Evolução<br>
+                <input type="radio" name="resposta1" value="opcao_errada2"> Adulto > Crescimento > Evolução
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="pergunta">Pergunta 2: Como um mímico caça sua presa?</p>
+            <div class="option">
+                <input type="radio" name="resposta2" value="opcao_errada1"> Ataca assim que avista um alvo em um local remoto, verificando se ⠀⠀ não há ninguém por perto,<br><br>
+                <input type="radio" name="resposta2" value="opcao_correta"> Observa sua rotina e ataca em um momento de fragilidade<br><br>
+                <input type="radio" name="resposta2" value="opcao_errada2"> No caso de sua presa estar dormindo, o mímico se utilizará ⠀⠀⠀⠀⠀⠀ ⠀⠀ de artifícios como sons e imitação de vozes para chamar sua atenção.
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="pergunta">Pergunta 3: O que fazer se encontrar um mímico parado?</p>
+            <div class="option">
+                <input type="radio" name="resposta3" value="opcao_correta"> Saia de perto em silêncio e alerte as autoridades<br>
+                <input type="radio" name="resposta3" value="opcao_errada1"> Chame por ajuda e se esconda, se sair de perto, ele pode te perseguir<br>
+                <input type="radio" name="resposta3" value="opcao_errada2"> Faça quanto barulho puder, para que alguém venha te ajudar
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="pergunta">Pergunta 4: O que fazer caso um mímico te ataque?</p>
+            <div class="option">
+                <input type="radio" name="resposta4" value="opcao_errada1"> Permaneça imóvel, fingindo que não é um humano. <br><br>
+                <input type="radio" name="resposta4" value="opcao_correta"> Use algo para tentar bloquear os ataques do mímico enquanto foge.<br><br>
+                <input type="radio" name="resposta4" value="opcao_errada2"> Use uma arma para ferir o mímico. Um mímico não avancará se sua ⠀⠀ saúde correr risco.
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="pergunta">Pergunta 5: No caso de um mímico invadir o seu corpo, você pode ter alguns momentos antes do ser controlar o seu cérebro ou roubar sua pele. Qual a ação correta a se tomar?</p>
+            <div class="option">
+                <input type="radio" name="resposta5" value="opcao_correta"> S̶̱̰̖̙͚͋̇̅ͅư̶̩̜͙̹̞̜͉̇̿͐̄̀̚̚͜͠͝i̵̛̬̾͌̏͒̽͒̀͐͝c̷̰̲̯͒̓̂̀͐í̷̲͓̗̩̫̎͌͂̂͊̈͜͠d̷̦̤͍͎͖̱͍̠̭͈͂̿̇́̐̽̕͝į̴̢̡̖̺͈̲̻̥̜͖͆́̈́̇ö̷̢̞̰̫́͘<br><br>
+                <input type="radio" name="resposta5" value="opcao_errada1"> Tampar a respiração e colocar a cabeça na água, assim o mímico vai ⠀⠀ precisar coletar oxigênio e não poderá fazer isso pelos orifícios da ⠀ ⠀ ⠀ ⠀cabeça.<br><br>
+                <input type="radio" name="resposta5" value="opcao_errada2"> 
+            </div>
+        </div>
+
+        <button onclick="verificarRespostas()">Finalizar</button>
+
+    </div>
+</body>
+</html>

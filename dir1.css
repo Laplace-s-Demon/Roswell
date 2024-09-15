@@ -1,0 +1,31 @@
+.right {
+margin: auto;
+margin-top: 100px;
+width: 400px;
+box-shadow: 1px 1px 5px #f3dd63;
+background-color: rgb(234, 241, 130);
+padding: 30px;
+border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+.texto{
+    text-align: center;
+    margin-top: 0;
+}
+
+.Mimic {
+    margin-left: 25px;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.descrição {
+    text-align: center;
+}

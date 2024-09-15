@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTC-3">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fase 2</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <body>
+
+    <div class="card">
+        <div class="topo">
+            <h2>Bem-vindo à segunda fase do seu teste.</h2>
+            <br>
+            <p class="p1">Digite a senha que obteve no final da fase anterior.</p>
+
+  <form class="form" onsubmit="return verificarSenha()">
+    <label class="label" for="senha"></label>
+    <input placeholder="Digite a senha" class="camposenha" type="password" id="senha" required>
+    <span id="password-toggle" class="password-toggle" onclick="togglePasswordVisibility()">Exibir senha</span>
+    <br>
+    <input class="botão" type="submit" value="Verificar">
+  </form>
+</div>
+
+  <script>
+    
+    function verificarSenha() {
+      var senhaDigitada = document.getElementById("senha").value;
+      var senhaDigitadaMD5 = CryptoJS.MD5(senhaDigitada).toString();
+      var senhaCorreta = ("343b2b8ed97512673e3e1ef2705b0de0").toString();
+      
+      if (senhaDigitadaMD5 === senhaCorreta) {
+        window.location.href = "dir1.html";
+      } else {
+        alert("Senha incorreta! Lembre-se de colocar os espaços ou letras maiúsculas.");
+      }
+      
+      return false;
+    }
+  </script>
+
+<script>
+  function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("senha");
+    var passwordToggle = document.getElementById("password-toggle");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      passwordToggle.textContent = "Ocultar senha";
+    } else {
+      passwordInput.type = "password";
+      passwordToggle.textContent = "Exibir senha";
+    }
+  }
+</script>
+
+</body>
+</html>

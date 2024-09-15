@@ -1,0 +1,58 @@
+body {
+    background-color: #0e0303;
+}
+
+.card {
+    margin: auto;
+    margin-top: 250px;
+    width: 400px;
+    box-shadow: 1px 1px 5px #ccc;
+    background-color: azure;
+    padding: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #f8eded, #e2d3d3)
+}
+
+.camposenha {
+    border-radius: 5px;
+    outline: 0;
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+}
+
+.img {
+    border-radius: 50px;
+    box-shadow: 7px 7px 7px #ccc;
+}
+
+.botão {
+    border-radius: 10px;
+    outline: 0;
+    width: 100%;
+    padding: 5px;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f7ecec;
+}
+
+.label {
+    width: 100%;
+    color: #0e0303;
+    display: block;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+.topo {
+    text-align: center;
+}
+
+.topo > p {
+    margin-top: 0;
+}
+
+.topo > h2 {
+    margin-bottom: 0;
+}
